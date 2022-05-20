@@ -4,12 +4,15 @@ import random
 import sys
 import os
 
+import time
 
 broker="broker.mqttdashboard.com"
 port=1883
 
 path  = "/home/pi/MAASProject/"
 clone = "git clone gitolite@<server_ip>:/your/project/name.git"
+
+time.sleep(120)
 
 def on_message(client, userdata, message):
     global data_str_number
