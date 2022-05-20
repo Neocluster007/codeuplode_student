@@ -23,7 +23,7 @@ def on_message(client, userdata, message):
     if(data == "download"):
         os.system("sudo mkdir /home/pi/testdownload")
         os.system("sudo rm -rf /home/pi/testdownload/codeuplode_student && cd /home/pi/testdownload && git clone https://github.com/ballbuen19/codeuplode_student.git && rm -rf /home/pi/MAASProject/* && mv /home/pi/testdownload/codeuplode_student/* /home/pi/MAASProject")
-        #os.system("sudo reboot")
+        os.system("sudo reboot")
 
         #os.chdir(path)  # Specifying the path where the cloned project needs to be copied
         #os.system(clone)  # Cloning
