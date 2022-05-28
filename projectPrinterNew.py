@@ -20,6 +20,8 @@ path_location = "/home/pi/MAASProject/"
 def Print_ter():
     global data_str_number
 
+
+
     try:
 
         # ts = time.time()
@@ -170,7 +172,11 @@ def Print_ter():
             new_image.save("Print_" + str(n) + ".png")
 
             print("Print_" + str(n) + ".png")
-            # os.system( "lp -d Xprinter-XP-420B Print_" + str(n) + ".png")
+
+            os.system("cupsenable Xprinter-XP-420B")
+            os.system("cupsaccept Xprinter-XP-420B")
+
+            os.system( "lp -d Xprinter-XP-420B Print_" + str(n) + ".png")
 
     except Exception:
         print("Data Error --> ")
